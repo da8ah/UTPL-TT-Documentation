@@ -1,0 +1,18 @@
+[submodule "Prototipo/Backend"]
+	path = Prototipo/Backend
+	url = https://github.com/da8ah/UTPL-TT-Backend.git
+[submodule "Prototipo/Admin"]
+	path = Prototipo/Admin
+	url = https://github.com/da8ah/UTPL-TT-MobileAppAdmin.git
+[submodule "Prototipo/Client"]
+	path = Prototipo/Client
+	url = https://github.com/da8ah/UTPL-TT-MobileApp.git
+[submodule "Despliegue/BookStore"]
+	path = Despliegue/BookStore
+	url = https://github.com/da8ah/UTPL-TT-BookStore.git
+[submodule "Despliegue/Manager"]
+	path = Despliegue/Manager
+	url = https://github.com/da8ah/UTPL-TT-BookStoreManager.git
+[submodule "Despliegue/App"]
+	path = Despliegue/App
+	url = https://github.com/da8ah/UTPL-TT-BookStoreApp.git
