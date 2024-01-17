@@ -29,106 +29,110 @@ El objetivo de este proyecto es analizar la seguridad de las aplicaciones móvil
 
 1. Instalar nvm
 
-```bash
+    ```bash
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
     sudo apt update -y
-```
+    ```
 
 1. Recargar la Terminal
 
-```bash
+    ```bash
     nvm -v
-```
+    ```
 
 1. Instalar una versión de Node y NPM
 
-```bash
+    ```bash
     nvm ls
-```
+    ```
 
-(Recomendado)
-```bash
+    (Recomendado)
+    ```bash
     nvm install lts/hydrogen
-```
-(Última versión estable)
-```bash
+    ```
+    (Última versión estable)
+    ```bash
     nvm install --lts
-```
+    ```
 
 1. Cambiar de versión en caso de tener otras
 
-(Última versión estable)
-```bash
+    (Última versión estable)
+    ```bash
     nvm use --lts
-```
+    ```
 
 1. Verificar Node y NPM
 
-```bash
+    ```bash
     node -v
     npm -v
-```
+    ```
 
 1. Desinstalar (en caso de fallas)
 
-```bash
-nvm deactivate
-nvm uninstall node
-```
+    ```bash
+    nvm deactivate
+    nvm uninstall node
+    ```
 
 ### Backend
 
 1. Clonar el repositorio
 
-```bash
+    ```bash
     git clone <repo-url>
-```
-```bash
+    ```
+    ```bash
     cd <repo-name>
-```
+    ```
 
 1. Instalar PNPM mediante NPM
 
-```bash
+    ```bash
     npm install -g pnpm
-```
+    ```
 
 1. Instalar dependencias
 
-```bash
+    ```bash
     pnpm i
-```
+    ```
 
 1. Ejecutar y Testear
 
-```bash
+    ```bash
     pnpm start
     pnpm test
-```
+    ```
 
 ### Aplicaciones Móviles
 
 1. Clonar el repositorio
 
-```bash
+    ```bash
     git clone <repo-url>
-```
-```bash
+    ```
+    ```bash
     cd <repo-name>
-```
+    ```
 
 1. Instalar dependencias con NPM
 
-```bash
+    ```bash
     npm i
-```
+    ```
 
 1. Ejecutar y Testear
 
-```bash
+    ```bash
     npm start
     npm test
-```
+    ```
+
+<br/>
+<br/>
+
 ## Replicación Local para SAST/DAST de Aplicaciones Móviles
 
 ⚠ NOTA: El testing de estas aplicaciones se lo realizó utilizando Windows por lo que a continuación se indican los pasos para replicar su ejecución en este sistema operativo.
@@ -139,46 +143,46 @@ nvm uninstall node
 
 1. Instalar dependencias desde PowerShell
 
-IDs:
-- `Git.Git`
-- `Python.Python.3.8`
-- `Oracle.JavaRuntimeEnvironment`
-- `Oracle.JDK.19` (o 20)
-- `Microsoft.VisualStudio.2022.BuildTools`
-- `ShiningLight.OpenSSL`
-- `wkhtmltopdf.wkhtmltox`
+    IDs:
+    - `Git.Git`
+    - `Python.Python.3.8`
+    - `Oracle.JavaRuntimeEnvironment`
+    - `Oracle.JDK.19` (o 20)
+    - `Microsoft.VisualStudio.2022.BuildTools`
+    - `ShiningLight.OpenSSL`
+    - `wkhtmltopdf.wkhtmltox`
 
-```bash
+    ```bash
     winget install -i <id>
-```
+    ```
 
 1. Agregar las siguientes Variables de Entorno
 
-- `Python3.8`
-- `jre1.8.0`
-- `jdk-19`
-- `wkhtmltopdf`
+    - `Python3.8`
+    - `jre1.8.0`
+    - `jdk-19`
+    - `wkhtmltopdf`
 
 1. Clonar el repositorio
 
-```bash
+    ```bash
     git clone https://github.com/MobSF/Mobile-Security-Framework-MobSF.git
-```
+    ```
 
 1. Instalar MobSF
 
-```bash
+    ```bash
     cd Mobile-Security-Framework-MobSF
-```
-```bash
+    ```
+    ```bash
     .\setup.bat
-```
+    ```
 
 1. Ejecutar MobSF
 
-```bash
+    ```bash
     cd Mobile-Security-Framework-MobSF
-```
-```bash
+    ```
+    ```bash
     .\run.bat 127.0.0.1:8000
-```
+    ```
