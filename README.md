@@ -21,6 +21,9 @@ El objetivo de este proyecto es analizar la seguridad de las aplicaciones móvil
 
 ## Estructura del Repositorio
 
+<br/>
+<br/>
+
 ## Replicación Local para ejecutar Aplicaciones
 
 ⚠ NOTA: El desarrollo de estas aplicaciones se lo realizó utilizando Ubuntu (Linux) por lo que a continuación se indican los pasos para replicar su ejecución en este sistema operativo.
