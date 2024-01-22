@@ -21,6 +21,24 @@ El objetivo de este proyecto es analizar la seguridad de las aplicaciones móvil
 
 ## Estructura del Repositorio
 
+```bash
+.
+│
+├───Despliegue
+│   │   BookStore               # Backend
+│   │   App                     # Cliente
+│   │   Manager                 # Administrador
+├───Prototipo
+│   │   Backend
+│   │   Client
+│   │   Admin
+├───Seguridad                   # SAST/DAST
+│   │   MobSF (SAST)            # Pruebas mediante MobSF del archivo APK
+│   │   Rooting (DAST)          # Pruebas en dispositivos móviles mediante Rooting
+│   ├───    Unbrick             # Proceso para revivir un móvil si este se Brickea
+│
+```
+
 <br/>
 <br/>
 
@@ -194,7 +212,7 @@ El objetivo de este proyecto es analizar la seguridad de las aplicaciones móvil
 
 ### Testing en Dispositivos Móviles (DAST)
 
-⚠ ADVERTENCIA: Este proceso lo realicé con la finalidad de investigación, específicamente para este Trabajo de Titulación. No me responsabilizo por ningún daño provocado al seguir este proceso. Sin embargo, si decides continuar te recomiendo utilizar los mismos recursos que comparto para minimizar posibles pérdidas, y sin la garantía de que todo funcione de la misma manera.
+⚠ ADVERTENCIA: Este proceso lo realicé con la finalidad de investigación, específicamente para este Trabajo de Titulación. No me responsabilizo por ningún daño provocado al seguir este proceso. Sin embargo, si decides continuar te recomiendo utilizar los mismos recursos que comparto para minimizar posibles pérdidas, aunque sin la garantía de que funcione de igual forma.
 
 1. Usar un dispositivo para pruebas, en este caso [OnePlus 7T HD1907](https://a.co/d/cJ2WtwK)
 1. Hacer una Copia de seguridad de los archivos y del sistema (se formateará el dispositivo reiteradas veces)
@@ -202,3 +220,17 @@ El objetivo de este proyecto es analizar la seguridad de las aplicaciones móvil
 1. Extraer una imagen (boot.img) con [Oxygen Updater](https://oxygenupdater.com/) y [payload_dumper](https://github.com/vm03/payload_dumper.git)
 1. Usar [Magisk](https://github.com/topjohnwu/Magisk/releases) para parchear la imagen
 1. Usar la imagen parcheada para Flashear el dispositivo
+
+<br/>
+<br/>
+
+## Resultados
+
+De la versión de Despliegue se publicó en Internet tanto el Backend como la aplicación móvil del cliente (App) en los siguientes enlaces:
+
+⚠ NOTA: El backend está desplegado a través de un servidor gratuito por lo que debe inicializarse y después de 2 a 5 min. aproximadamente se pueden realizar peticiones.
+
+- [BookStore API](https://utpl-tt-bookstore.azurewebsites.net/api/books)
+- [BookStore (Demo)](https://play.google.com/store/apps/details?id=com.daochoa6.bookstoreapp)
+
+Adicionalmente, si se desean realizar modificaciones a los libros publicados o agregar más se debe crear una build tipo APK del proyecto de la aplicación de administrador (Manager).
