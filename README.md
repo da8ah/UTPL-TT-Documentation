@@ -32,7 +32,7 @@ El objetivo de este proyecto es analizar la seguridad de las aplicaciones móvil
 │   │   Backend
 │   │   Client
 │   │   Admin
-├───Seguridad                   # SAST/DAST
+├───Seguridad                   # SAST/DAST (incluyen tutorial README)
 │   │   MobSF (SAST)            # Pruebas mediante MobSF del archivo APK
 │   │   Rooting (DAST)          # Pruebas en dispositivos móviles mediante Rooting
 │   ├───    Unbrick             # Proceso para revivir un móvil si este se Brickea
