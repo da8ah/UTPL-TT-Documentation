@@ -44,7 +44,7 @@ El objetivo de este proyecto es analizar la seguridad de las aplicaciones móvil
 
 ## Replicación Local para ejecutar Aplicaciones
 
-⚠ NOTA: El desarrollo de estas aplicaciones se lo realizó utilizando Ubuntu (Linux) por lo que a continuación se indican los pasos para replicar su ejecución en este sistema operativo.
+📌 NOTA: El desarrollo de estas aplicaciones se lo realizó utilizando Ubuntu (Linux) por lo que a continuación se indican los pasos para replicar su ejecución en este sistema operativo.
 
 ### Node y NPM con NVM (Ubuntu)
 
@@ -158,7 +158,7 @@ El objetivo de este proyecto es analizar la seguridad de las aplicaciones móvil
 
 De la versión de Despliegue se publicó en Internet tanto el Backend como la aplicación móvil del cliente (App) en los siguientes enlaces:
 
-⚠ NOTA: El backend está desplegado a través de un servidor gratuito por lo que debe inicializarse y después de 2 a 5 min. aproximadamente se pueden realizar peticiones.
+📌 NOTA: El backend está desplegado a través de un servidor gratuito por lo que debe inicializarse y después de 2 a 5 min. aproximadamente se pueden realizar peticiones.
 
 - [BookStore API](https://utpl-tt-bookstore.azurewebsites.net/api/books)
 - [BookStore (Demo)](https://play.google.com/store/apps/details?id=com.daochoa6.bookstoreapp)
