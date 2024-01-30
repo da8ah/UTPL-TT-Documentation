@@ -1,6 +1,10 @@
 ### Testing en Dispositivos Móviles (DAST)
 
-⚠ ADVERTENCIA: Este proceso lo realicé con la finalidad de investigación, específicamente para este Trabajo de Titulación. No me responsabilizo por ningún daño provocado al seguir este proceso. Sin embargo, si decides continuar te recomiendo utilizar los mismos recursos que comparto para minimizar posibles pérdidas, aunque sin la garantía de que funcione de igual forma.
+<br/>
+
+⚠ ADVERTENCIA: Este proceso lo realicé con la finalidad de investigación, específicamente para este Trabajo de Titulación. No me responsabilizo por ningún daño provocado al seguir este proceso. Sin embargo, si decides continuar te recomiendo utilizar los mismos recursos que comparto para minimizar posibles pérdidas aunque sin ninguna garantía.
+
+<br/>
 
 1. Usar un dispositivo para pruebas, en este caso [OnePlus 7T HD1907](https://a.co/d/cJ2WtwK)
 1. Hacer una Copia de seguridad de los archivos y del sistema (se formateará el dispositivo reiteradas veces)
@@ -8,3 +12,28 @@
 1. Extraer una imagen (boot.img) con [Oxygen Updater](https://oxygenupdater.com/) y [payload_dumper](https://github.com/vm03/payload_dumper.git)
 1. Usar [Magisk](https://github.com/topjohnwu/Magisk/releases) para parchear la imagen
 1. Usar la imagen parcheada para Flashear el dispositivo
+
+<br/>
+<br/>
+
+📌 NOTA: El testing de estas aplicaciones se lo realizó utilizando Windows por lo que a continuación se indican los pasos para replicar su ejecución en este sistema operativo.
+
+1. [Obtener Winget desde la Microsoft Store](https://www.microsoft.com/p/app-installer/9nblggh4nns1#activetab=pivot:overviewtab)
+
+1. Instalar dependencias desde PowerShell
+
+    IDs:
+    - `Google.PlatformTools`
+
+    <br/>
+
+    ```bash
+    winget install <id>
+    ```
+
+1. Instalar [Drivers de OnePlus](https://oneplusdriver.com/download-oneplus-driver#download)
+
+1. Agregar las siguientes Variables de Entorno
+
+    - `Google.PlatformTools`
+    - `C:\Program Files (x86)\OnePlus USB Drivers\Android`
