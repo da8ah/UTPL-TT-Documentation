@@ -158,7 +158,7 @@ El objetivo de este proyecto es analizar la seguridad de las aplicaciones móvil
 
 De la versión de Despliegue se publicó en Internet tanto el Backend como la aplicación móvil del cliente (App) en los siguientes enlaces:
 
-📌 NOTA: El backend está desplegado a través de un servidor gratuito por lo que debe inicializarse y después de 2 a 5 min. aproximadamente se pueden realizar peticiones.
+📌 NOTA: El backend está desplegado a través de un servidor gratuito por lo que debe inicializarse y después de 2 a 5 minutos aproximadamente se pueden realizar peticiones.
 
 - [BookStore API](https://utpl-tt-bookstore.azurewebsites.net/api/books)
 - [BookStore (Demo)](https://play.google.com/store/apps/details?id=com.daochoa6.bookstoreapp)

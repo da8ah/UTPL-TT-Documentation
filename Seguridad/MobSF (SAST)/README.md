@@ -52,3 +52,14 @@
     .\run.bat 127.0.0.1:8000
     ```
     
+1. Arrastrar el archivo APK e iniciar el Análisis
+
+<br/>
+
+<div align="center">
+<img style="width:70%" src="./img/MobSF.png" >
+</div>
+
+<br/>
+
+📌 NOTA: El Análisis puede durar de 10 a 20 minutos o más.
