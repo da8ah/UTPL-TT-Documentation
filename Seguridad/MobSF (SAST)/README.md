@@ -1,4 +1,4 @@
-### Testing mediante MobSF (SAST)
+# Testing mediante MobSF (SAST)
 
 📌 NOTA: El testing de estas aplicaciones se lo realizó utilizando Windows por lo que a continuación se indican los pasos para replicar su ejecución en este sistema operativo.
 

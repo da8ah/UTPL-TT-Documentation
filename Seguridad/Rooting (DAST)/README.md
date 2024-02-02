@@ -1,4 +1,4 @@
-### Testing en Dispositivos Móviles (DAST)
+# Testing en Dispositivos Móviles (DAST)
 
 <br/>
 
@@ -16,7 +16,11 @@
 <br/>
 <br/>
 
+## Preparación
+
 📌 NOTA: El testing de estas aplicaciones se lo realizó utilizando Windows por lo que a continuación se indican los pasos para replicar su ejecución en este sistema operativo.
+
+1. Contar con el dispositivo y haber respaldado tanto el sistema como la información
 
 1. [Obtener Winget desde la Microsoft Store](https://www.microsoft.com/p/app-installer/9nblggh4nns1#activetab=pivot:overviewtab)
 
@@ -37,3 +41,7 @@
 
     - `Google.PlatformTools`
     - `C:\Program Files (x86)\OnePlus USB Drivers\Android`
+
+## Desbloquear bootloader
+
+1. Activar el modo desarrollador en el dispositivo
