@@ -45,3 +45,14 @@
 ## Desbloquear bootloader
 
 1. Activar el modo desarrollador en el dispositivo
+
+<br/>
+
+<div align="center" style="width:100%;display:flex;flex-direction:row;justify-content:space-evenly;align-items:flex-start;">
+<img style="width:20%" src="./img/bootloader1.jpg" >
+<img style="width:20%" src="./img/bootloader2.jpg" >
+<img style="width:20%" src="./img/bootloader3.jpg" >
+<img style="width:20%" src="./img/bootloader4.jpg" >
+</div>
+
+<br/>
