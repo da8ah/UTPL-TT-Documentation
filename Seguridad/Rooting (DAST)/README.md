@@ -14,7 +14,6 @@
 1. Usar la imagen parcheada para Flashear el dispositivo
 
 <br/>
-<br/>
 
 ## Preparación
 
@@ -44,15 +43,129 @@
 
 ## Desbloquear bootloader
 
-1. Activar el modo desarrollador en el dispositivo
+1. Activar el Modo desarrollador en el dispositivo
 
-<br/>
+    - Presionar 7 veces en "Versión de software"
 
-<div align="center" style="width:100%;display:flex;flex-direction:row;justify-content:space-evenly;align-items:flex-start;">
-<img style="width:20%" src="./img/bootloader1.jpg" >
-<img style="width:20%" src="./img/bootloader2.jpg" >
-<img style="width:20%" src="./img/bootloader3.jpg" >
-<img style="width:20%" src="./img/bootloader4.jpg" >
-</div>
+    <br/>
 
-<br/>
+    <div align="center" style="width:100%;display:flex;flex-direction:row;justify-content:space-evenly;align-items:flex-start;">
+    <img style="width:20%" src="./img/bootloader1.jpg" >
+    <img style="width:20%" src="./img/bootloader2.jpg" >
+    <img style="width:20%" src="./img/bootloader3.jpg" >
+    <img style="width:20%" src="./img/bootloader4.jpg" >
+    </div>
+
+    <br/>
+
+1. En Opciones del desarrollador habilitar:
+
+    - Mantener la pantalla encendida durante la carga
+    - Desbloqueo OEM (Activar)
+
+    <br/>
+
+    <div align="center" style="width:100%;display:flex;flex-direction:row;justify-content:space-evenly;align-items:flex-start;">
+    <img style="width:20%" src="./img/bootloader5.jpg" >
+    <img style="width:20%" src="./img/bootloader6.jpg" >
+    <img style="width:20%" src="./img/bootloader7.jpg" >
+    <img style="width:20%" src="./img/bootloader8.jpg" >
+    </div>
+
+    <br/>
+
+    - Depuración de USB > (Aceptar) > (PERMITIR siempre desde esta computadora)
+    - Desactivar tiempo límite de autorización de ADB (opcional)
+
+    <br/>
+
+    <div align="center" style="width:100%;display:flex;flex-direction:row;justify-content:space-evenly;align-items:flex-start;">
+    <img style="width:20%" src="./img/bootloader9.jpg" >
+    <img style="width:20%" src="./img/bootloader10.jpg" >
+    <img style="width:20%" src="./img/bootloader11.jpg" >
+    </div>
+
+    <br/>
+
+1. Configurar Fastboot Drivers
+
+    - Administrador de dispositivos > Dispositivos portátiles > Otros dispositivos
+    - Elegir en una lista de controladores disponibles en el equipo
+
+        <br/>
+
+        <div align="center">
+        <img style="width:50%" src="./img/dispositivos1.png" >
+        </div>
+
+        <br/>
+
+        <div align="center">
+        <img style="width:50%" src="./img/dispositivos2.png" >
+        </div>
+
+        <br/>
+
+        <div align="center">
+        <img style="width:50%" src="./img/dispositivos3.png" >
+        </div>
+
+        <br/>
+
+        <div align="center">
+        <img style="width:50%" src="./img/dispositivos4.png" >
+        </div>
+
+        <br/>
+
+    - (Usar disco...): 1 Unlock bootloader > Fastboot Driver > android_winusb.inf
+
+        <br/>
+
+        <div align="center">
+        <img style="width:50%" src="./img/dispositivos5.png" >
+        </div>
+
+        <br/>
+
+        <div align="center">
+        <img style="width:90%" src="./img/dispositivos6.png" >
+        </div>
+
+        <br/>
+
+        <div align="center">
+        <img style="width:50%" src="./img/dispositivos7.png" >
+        </div>
+
+        <br/>
+    
+    - Asegurarse de que estén listados: ADB Interface, Bootloader y Composite
+
+        <br/>
+
+        <div align="center">
+        <img style="width:50%" src="./img/dispositivos8.png" >
+        </div>
+
+        <br/>
+
+        <div align="center">
+        <img style="width:50%" src="./img/dispositivos9.png" >
+        </div>
+
+        <br/>
+
+        <div align="center">
+        <img style="width:50%" src="./img/dispositivos10.png" >
+        </div>
+
+        <br/>
+
+        <div align="center">
+        <img style="width:50%" src="./img/dispositivos11.png" >
+        </div>
+
+        <br/>
+
+    - Al finalizar asegurarse de que se muestre: Android ADB Interface
