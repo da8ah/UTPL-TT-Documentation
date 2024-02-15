@@ -38,11 +38,14 @@
 
 1. Agregar las siguientes Variables de Entorno
 
-    - `Google.PlatformTools`
+    - `Google.PlatformTools` (buscar ruta de binarios)
     - `C:\Program Files (x86)\OnePlus USB Drivers\Android`
 
-## Desbloquear bootloader
+    <br/>
 
+## Desbloquear bootloader (conectar móvil por USB)
+
+1. Conectar el móvil por USB a la computadora
 1. Activar el Modo desarrollador en el dispositivo
 
     - Presionar 7 veces en "Versión de software"
@@ -87,7 +90,24 @@
 
     <br/>
 
-1. Configurar Fastboot Drivers
+1. Configurar Fastboot Driver
+
+    - Con el dispositivo conectado por USB acceder al bootloader mediante ADB
+
+        ```bash
+        adb devices
+        ```
+        ```bash
+        adb reboot bootloader
+        ```
+
+        <br/>
+
+        <div align="center">
+        <img style="width:50%" src="./img/bootloader12.png" >
+        </div>
+
+        <br/>
 
     - Administrador de dispositivos > Dispositivos portátiles > Otros dispositivos
     - Elegir en una lista de controladores disponibles en el equipo
@@ -168,4 +188,46 @@
 
         <br/>
 
-    - Al finalizar asegurarse de que se muestre: Android ADB Interface
+    - Al finalizar asegurarse de que se muestre: Android Device > Android ADB Interface
+
+    <br/>
+
+1. Desbloquear dispositivo (Bootloader)
+
+    El bootloader del dispositivo por defecto viene bloqueado. Se debe seguir el proceso para desbloquearlo que se explica a continuación:
+
+    - Verificar el estado del bootloader mediante el Modo EDL (locked o unlocked):
+        
+        {:start="1"}
+        1. Manualmente
+                
+            - Apagar el dispositivo
+            - Mantener ambos botones de volumen presionados
+            - Encender dispositivo manteniendo los botones
+
+            <br/>
+
+            <div align="center">
+            <img style="width:50%" src="./img/locked1.jpg" >
+            </div>
+
+            <br/>
+
+        1. Mediante ADB
+
+            ```bash
+            adb devices
+            ```
+            ```bash
+            adb reboot edl
+            ```
+
+            <br/>
+
+            <div align="center">
+            <img style="width:50%" src="./img/unlock1.png" >
+            </div>
+
+            <br/>
+
+
