@@ -196,38 +196,66 @@
 
     El bootloader del dispositivo por defecto viene bloqueado. Se debe seguir el proceso para desbloquearlo que se explica a continuación:
 
-    - Verificar el estado del bootloader mediante el Modo EDL (locked o unlocked):
+    - Verificar mediante el Modo EDL si el bootloader está bloqueado (locked) de lo contrario saltar este paso hasta el final.
         
-        {:start="1"}
-        1. Manualmente
-                
-            - Apagar el dispositivo
-            - Mantener ambos botones de volumen presionados
-            - Encender dispositivo manteniendo los botones
+        **Manualmente**
 
-            <br/>
+        - Apagar el dispositivo
+        - Mantener ambos botones de volumen presionados
+        - Encender dispositivo manteniendo los botones
 
-            <div align="center">
-            <img style="width:50%" src="./img/locked1.jpg" >
-            </div>
+        <br/>
 
-            <br/>
+        <div align="center">
+        <img style="width:20%" src="./img/locked1.jpg" >
+        </div>
 
-        1. Mediante ADB
+        <br/>
 
-            ```bash
-            adb devices
-            ```
-            ```bash
-            adb reboot edl
-            ```
+        **Mediante ADB**
 
-            <br/>
+        ```bash
+        adb devices
+        ```
+        ```bash
+        adb reboot edl
+        ```
 
-            <div align="center">
-            <img style="width:50%" src="./img/unlock1.png" >
-            </div>
+        <br/>
 
-            <br/>
+        <div align="center">
+        <img style="width:50%" src="./img/unlock1.png" >
+        </div>
 
+        <br/>
 
+    - Obtener el código de desbloqueo
+
+        <br/>
+
+        <div align="center">
+        <img style="width:50%" src="./img/unlock2.png" >
+        </div>
+
+        <br/>
+
+        - Acceder al bootloader mediante ADB
+        
+        ```bash
+        adb devices
+        ```
+        ```bash
+        adb reboot bootloader
+        ```
+        
+        - Una vez en el bootloader, al ejecutar el siguiente comando debe presentar un error (FAILED: ... token ...)
+
+        ```bash
+        fastboot oem unlock
+        ```
+        
+        - El error anterior significa que necesitamos un código de desbloqueo, se obtiene mediante el comando
+
+        ```bash
+        fastboot oem get_unlock_code
+        ```
