@@ -47,6 +47,8 @@
 
 ### 1. Conectar el móvil por USB a la computadora
 
+- Asegurarse de habilitar la opción de transferencia de archivos
+
 ### 2. Activar el Modo desarrollador en el dispositivo
 
 - Presionar 7 veces en "Versión de software"
@@ -91,25 +93,47 @@
 
 <br/>
 
-### 4. Configurar Fastboot Driver
+### 4. Acceder al Bootloader del dispositivo (Si DEVICE STATE es unlocked saltar todo el proceso)
 
-- Con el dispositivo conectado por USB acceder al bootloader mediante ADB
+El bootloader del dispositivo por defecto viene bloqueado.
 
-    ```bash
-    adb devices
-    ```
-    ```bash
-    adb reboot bootloader
-    ```
+<br/>
 
-    <br/>
+**Manualmente**
 
-    <div align="center">
-    <img style="width:50%" src="./img/bootloader12.png" />
-    </div>
+- Apagar el dispositivo
+- Mantener ambos botones de volumen presionados
+- Encender dispositivo manteniendo los botones
+- Verificar al final DEVICE STATE (locked/unlocked)
 
-    <br/>
+<br/>
 
+<div align="center">
+<img style="width:30%" src="./img/locked1.jpg" />
+</div>
+
+<br/>
+
+**Mediante ADB**
+
+```bash
+adb devices
+```
+```bash
+adb reboot bootloader
+```
+
+<br/>
+
+<div align="center">
+<img style="width:70%" src="./img/bootloader.png" />
+</div>
+
+<br/>
+
+### 5. Configurar Fastboot Driver
+
+- Con el dispositivo conectado por USB acceder al bootloader mediante ADB (Ver paso anterior)
 - Administrador de dispositivos > Dispositivos portátiles > Otros dispositivos
 - Elegir en una lista de controladores disponibles en el equipo
 
@@ -193,44 +217,6 @@
 
 <br/>
 
-### 5. Verificar Bootloader del dispositivo (Si es unlocked saltar esta sección a la siguiente)
-
-El bootloader del dispositivo por defecto viene bloqueado. Se debe seguir el proceso para desbloquearlo que se explica a continuación:
-
-- Verificar mediante el Modo EDL si el bootloader está bloqueado (locked) de lo contrario saltar este paso hasta el final.
-    
-    **Manualmente**
-
-    - Apagar el dispositivo
-    - Mantener ambos botones de volumen presionados
-    - Encender dispositivo manteniendo los botones
-    - Verificar al final DEVICE STATE (locked/unlocked)
-
-    <br/>
-
-    <div align="center">
-    <img style="width:30%" src="./img/locked1.jpg" />
-    </div>
-
-    <br/>
-
-    **Mediante ADB**
-
-    ```bash
-    adb devices
-    ```
-    ```bash
-    adb reboot edl
-    ```
-
-    <br/>
-
-    <div align="center">
-    <img style="width:70%" src="./img/unlock1.png" />
-    </div>
-
-    <br/>
-
 ### 6. Código y Token de desbloqueo
 
 #### Obtener el código de desbloqueo
@@ -238,7 +224,7 @@ El bootloader del dispositivo por defecto viene bloqueado. Se debe seguir el pro
 <br/>
 
 <div align="center">
-<img style="width:70%" src="./img/unlock2.png" />
+<img style="width:70%" src="./img/unlock1.png" />
 </div>
 
 <br/>
@@ -269,13 +255,13 @@ El bootloader del dispositivo por defecto viene bloqueado. Se debe seguir el pro
 #### Obtener un token de desbloqueo
 
 - Crear una cuenta en el sitio web de [OnePlus](https://www.oneplus.com/us/unlock_token)
-- Iniciar sesión y crear una solicitud para desbloqueo de dispositivo ([Unlock Your Device](https://www.oneplus.com/us/unlock_token))
+- Iniciar sesión y crear una solicitud [Unlock Your Device](https://www.oneplus.com/us/unlock_token)
 - Completar la información como se muestra a continuación
 
 <br/>
 
 <div align="center">
-<img style="width:50%" src="./img/unlock3.png" />
+<img style="width:50%" src="./img/unlock2.png" />
 </div>
 
 <br/>
@@ -285,17 +271,17 @@ El bootloader del dispositivo por defecto viene bloqueado. Se debe seguir el pro
 <br/>
 
 <div align="center">
-<img style="width:70%" src="./img/unlock4.png" />
+<img style="width:70%" src="./img/unlock3.png" />
 </div>
 
 <br/>
 
-- Esperar un día y luego en la parte inferior de la web presionar en "Get Support From OnePlus"
+- Esperar un día y luego en la parte inferior de la web presionar en "Get Support From OnePlus", para usar uno de los dos métodos que se explican debajo:
 
     <br/>
 
     <div align="center">
-    <img style="width:70%" src="./img/unlock5.png" />
+    <img style="width:70%" src="./img/unlock4.png" />
     </div>
 
     <br/>
@@ -318,7 +304,7 @@ El bootloader del dispositivo por defecto viene bloqueado. Se debe seguir el pro
         - Invoice: adjuntar captura de la compra del dispositivo
         - IMEI: en el móvil ir a llamadas y marcar al número *#06#
         - PCBD: en el móvil ir a llamadas y marcar al número *#888#
-        - Unlock code: utilizar el código del paso anterior con el comando `fastboot oem get_unlock_code`
+        - Unlock code: utilizar el [código del paso anterior](#6-código-y-token-de-desbloqueo) con el comando `fastboot oem get_unlock_code`
         - sn: Serial Number, obtener del mismo comando `fastboot oem get_unlock_code`
         - os: Operating System, ver la versión de Android del dispositivo en: 
             
@@ -326,7 +312,7 @@ El bootloader del dispositivo por defecto viene bloqueado. Se debe seguir el pro
 
         <br/>
 
-        En las imágenes se muestra toda la conversación pero he redactado un solo mensaje por facilidad.
+        En las imágenes se muestra toda la conversación pero he redactado un solo mensaje para mayor facilidad.
 
         ```bash
         Hi,
@@ -407,27 +393,27 @@ El bootloader del dispositivo por defecto viene bloqueado. Se debe seguir el pro
 
 ### 7. Flasheo de Bootloader con Token
 
-- Mover el token (.bin) a la carpeta del usuario (`C:\Users\<usuario>`) donde se encuentra instalado `.fastboot`
+- Mover el token `.bin` a la carpeta del usuario `C:\Users\<usuario>` (reemplazar con tu usuario), en donde se encuentra la carpeta `.fastboot`
 
 <br/>
 
 <div align="center">
-<img style="width:50%" src="./img/token1.png" />
+<img style="width:60%" src="./img/token1.png" />
 </div>
 
 <br/>
 
-- De lo contrario el archivo no será encontrado y se mostrará un Error (ANDROID_PRODUCT_OUT) 
+- De lo contrario el archivo no será encontrado y se mostrará un `Error: ANDROID_PRODUCT_OUT`
 
 <br/>
 
 <div align="center">
-<img style="width:70%" src="./img/token2.png" />
+<img style="width:80%" src="./img/token2.png" />
 </div>
 
 <br/>
 
-- Conectar el dispositivo mediante USB y repetir el paso [5. para ingresar al Bootloader](#5-verificar-bootloader-del-dispositivo-si-es-unlocked-saltar-esta-sección-a-la-siguiente)
+- Conectar el dispositivo mediante USB y repetir el paso para ingresar al Bootloader
 
 **Mediante ADB**
 
@@ -441,7 +427,43 @@ adb reboot bootloader
 <br/>
 
 <div align="center">
-<img style="width:70%" src="./img/lock1.png" />
+<img style="width:30%" src="./img/locked1.jpg" />
+</div>
+
+<br/>
+<br/>
+
+- Reemplazar `<file>` con el token y ejecutar los comandos para desbloqueo del Bootloader
+
+```bash
+fastboot flash cust-unlock <file>.bin
+```
+```bash
+flashboot oem unlock
+```
+
+<br/>
+
+- En el dispositivo móvil confirmar el desploqueo del Bootloader: `UNLOCK THE BOOLOADER`
+
+<br/>
+
+<div align="center">
+<img style="width:30%" src="./img/token3.jpg" />
+</div>
+
+<br/>
+
+<div align="center" style="width:100%;display:flex;flex-direction:row;justify-content:space-evenly;align-items:center;">
+<img style="width:20%" src="./img/token4.jpg" />
+<img style="width:20%" src="./img/token5.jpg" />
+<img style="width:20%" src="./img/token6.jpg" />
+</div>
+
+<br/>
+
+<div align="center">
+<img style="width:30%" src="./img/token7.jpg" />
 </div>
 
 <br/>
