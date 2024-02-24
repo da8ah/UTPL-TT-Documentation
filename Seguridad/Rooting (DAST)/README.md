@@ -454,7 +454,7 @@ flashboot oem unlock
 
 <br/>
 
-- Luego de confirmar el desbloqueo el dispositivo se formateará y se deberá volver a configurar
+- El dispositivo se formatea después del desbloqueo y se debe volver a configurar completamente
 
 <br/>
 
