@@ -38,14 +38,15 @@
 1. Tener a la mano la carpeta de `0 Unbrick` con sus recursos 
 
     - Descargar e instalar [WinRaR](https://www.winrar.es/descargas)
+    - Descomprimir `Qualcomm Drivers`
     - Descomprimir las tres partes de `hotdogt_11_O.01_210120`
     - Descomprimir el resultante `hotdogt_11_O.01_210120.zip`
 
-<br/>
+    <br/>
 
 1. El `Bootloader` debe estar `previamente desbloqueado` como se indicó en [(DAST)](https://github.com/da8ah/UTPL-TT-Documentation/tree/main/Seguridad/Rooting%20(DAST)#testing-en-dispositivos-m%C3%B3viles-dast)
 
-<br/>
+    <br/>
 
 1. Conectar el dispositivo mediante USB y acceder al `Modo EDL` ([Emergency Download Mode](https://nitorijournal.org/es/android-es/que-es-el-modo-edl-como-ingresar-al-modo-edl-en-cualquier-dispositivo-308.html))
 
@@ -87,6 +88,8 @@
     <br/>
 
 1. Deshabilitar tanto el `antivirus` como el `firewall`
+
+    <br/>
 
 1. Utilizar el instalador `QDLoader HS-USB Driver_64bit_Setup.exe` para:
 
@@ -176,20 +179,20 @@
 
     <br/>
 
-- Abrir MSM Tool con el móvil **desconectado** de USB:
+- Abrir MSM Tool con el móvil `desconectado de USB`:
     
     - Dejar desmarcada opción `SHA256`
     - Cambiar `Target` a `TMO`
     - Presionar `Start` para empezar ha escuchar conexiones
 
     <br/>
-    
-- Acceder al Modo EDL **Manualmente**:
+
+- Acceder al Modo EDL `Manualmente`:
 
     - El dispositivo debe estar desconectado de USB
     - Apagar el dispositivo
     - Mantener ambos botones de volumen presionados
-    - Con los botones presionados conectar a un [Puerto USB 2.0](https://www.thecustomdroid.com/oneplus-6-6t-unbrick-guide/#:~:text=from%20the%20PC.-,Important%20Notes%3A,-If%20you%20see) para **evitar Errores** (`Manual EDL`)
+    - Con los botones presionados conectar móvil a un [Puerto USB 2.0](https://www.thecustomdroid.com/oneplus-6-6t-unbrick-guide/#:~:text=from%20the%20PC.-,Important%20Notes%3A,-If%20you%20see) para **evitar Errores** (`Manual EDL`)
     
     <br/>
 
@@ -201,7 +204,7 @@
 
 ## Finalización
 
-1. Una vez finalizado desconectar el móvil y reconfigurar el sistema como estuvo:
+- Una vez finalizado desconectar el móvil y reconfigurar el sistema como estuvo:
 
     - Rehabilitar Driver Signature Verification (`Test Mode` off)
 
@@ -209,5 +212,5 @@
         ```bash
         bcdedit /set testsigning off
         ```
-    
-    - Habilitar `antivirus`/`firewall` nuevamente
+
+    - Habilitar nuevamente el `antivirus` y el `firewall`
