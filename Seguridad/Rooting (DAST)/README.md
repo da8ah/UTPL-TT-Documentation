@@ -114,7 +114,7 @@ El bootloader del dispositivo por defecto viene bloqueado.
 
 <br/>
 
-**Mediante ADB**
+**Mediante ADB** (con USB)
 
 ```bash
 adb devices
@@ -229,7 +229,7 @@ adb reboot bootloader
 
 <br/>
 
-- Acceder al bootloader mediante ADB
+- Acceder al bootloader mediante ADB (con USB)
 
     ```bash
     adb devices
@@ -415,7 +415,7 @@ adb reboot bootloader
 
 - Conectar el dispositivo mediante USB y repetir el paso para ingresar al Bootloader
 
-**Mediante ADB**
+**Mediante ADB** (con USB)
 
 ```bash
 adb devices
@@ -454,11 +454,19 @@ flashboot oem unlock
 
 <br/>
 
+- Luego de confirmar el desbloqueo el dispositivo se formateará y se deberá volver a configurar
+
+<br/>
+
 <div align="center" style="width:100%;display:flex;flex-direction:row;justify-content:space-evenly;align-items:flex-start;">
 <img style="width:20%" src="./img/token4.jpg" />
 <img style="width:20%" src="./img/token5.jpg" />
 <img style="width:20%" src="./img/token6.jpg" />
 </div>
+
+<br/>
+
+- Una vez configurado, volver a ingresar al Bootloader para verificar que esté desbloqueado (`unlocked`)
 
 <br/>
 

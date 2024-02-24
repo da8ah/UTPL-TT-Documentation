@@ -21,7 +21,7 @@
     winget install -i <id>
     ```
 
-1. Agregar las siguientes Variables de Entorno
+1. Agregar las siguientes Variables de Entorno (buscar ruta de binarios)
 
     - `Python3.8`
     - `jre1.8.0`
