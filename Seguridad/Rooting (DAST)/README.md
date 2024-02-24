@@ -454,7 +454,7 @@ flashboot oem unlock
 
 <br/>
 
-<div align="center" style="width:100%;display:flex;flex-direction:row;justify-content:space-evenly;align-items:center;">
+<div align="center" style="width:100%;display:flex;flex-direction:row;justify-content:space-evenly;align-items:flex-start;">
 <img style="width:20%" src="./img/token4.jpg" />
 <img style="width:20%" src="./img/token5.jpg" />
 <img style="width:20%" src="./img/token6.jpg" />
