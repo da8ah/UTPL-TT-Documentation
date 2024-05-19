@@ -35,7 +35,7 @@ El objetivo de este proyecto es analizar la seguridad de las aplicaciones móvil
 ├───Seguridad                   # SAST/DAST (incluyen tutorial README)
 │   │   MobSF (SAST)            # Pruebas mediante MobSF del archivo APK
 │   │   Rooting (DAST)          # Pruebas en dispositivos móviles mediante Rooting
-│   ├───    0 Unbrick             # Proceso para revivir un móvil si este se Brickea
+│   ├───    0 Unbrick             # Proceso para revivir un móvil si este se Brickea (Migrado a Google Drive)
 │
 ```
 

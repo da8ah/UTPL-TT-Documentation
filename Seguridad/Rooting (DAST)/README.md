@@ -7,6 +7,7 @@
 <br/>
 
 1. Usar un dispositivo para pruebas, en este caso [OnePlus 7T HD1907](https://a.co/d/cJ2WtwK)
+1. En caso de que el dispositivo quede inservible (brickeado) descargar los recursos de [Google Drive](https://drive.google.com/drive/folders/1Qddcf8cwDFOVflXdOL_ShIbWVe-rQKO_?usp=sharing)
 1. Hacer una Copia de seguridad de los archivos y del sistema (se formateará el dispositivo reiteradas veces)
 1. Desbloquear Bootloader (arranque) si está bloqueado (para evitar [full-brick](https://xdaforums.com/t/op7t-t-mobile-oos-11-0-1-5-hd63cb-unbrick-tool-to-restore-your-device-to-oxygenos.4004005/))
 1. Extraer una imagen (boot.img) con [Oxygen Updater](https://oxygenupdater.com/) y [payload_dumper](https://github.com/vm03/payload_dumper.git)
